@@ -1,0 +1,107 @@
+:root {
+  color: #292721;
+  background: #d5d0c6;
+  color-scheme: light;
+  font-family: Inter, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  /* Primitives: the only theme-specific values future palettes need to redefine. */
+  --color-canvas: #d5d0c6;
+  --color-surface: #f3f0e9;
+  --color-surface-raised: #faf8f3;
+  --color-surface-subtle: #e9e3d9;
+  --color-surface-translucent: rgba(250, 248, 244, 0.64);
+  --color-surface-hover: rgba(255, 255, 255, 0.65);
+  --color-text: #292721;
+  --color-text-muted: #716d64;
+  --color-text-quiet: #918a7f;
+  --color-border: rgba(54, 49, 41, 0.13);
+  --color-border-soft: rgba(54, 49, 41, 0.08);
+  --color-accent: #8e8271;
+  --color-accent-strong: #4f473e;
+  --color-action: #433a30;
+  --color-action-hover: #302a23;
+  --color-on-action: #f8f5ef;
+  --color-focus: #756959;
+  --color-header: rgba(243, 240, 233, 0.9);
+  --color-nav: rgba(245, 242, 235, 0.92);
+  --color-control: rgba(255, 255, 255, 0.35);
+  --color-control-selected: rgba(84, 75, 63, 0.09);
+  --color-art: #d9d2c7;
+  --color-art-paper: #ded7cc;
+  --color-art-stone: #d1c8bb;
+  --color-art-court: #d8d0c4;
+  --color-chart-track: rgba(102, 92, 79, 0.08);
+  --color-chart-bar: #9d9180;
+  --gradient-stage: radial-gradient(circle at 14% 5%, rgba(255, 255, 255, 0.66), transparent 27%), linear-gradient(135deg, #ddd8cf, #cac4ba);
+  --gradient-case: linear-gradient(90deg, rgba(243, 239, 231, 0.96) 0%, rgba(243, 239, 231, 0.78) 44%, rgba(243, 239, 231, 0.12) 76%);
+  --gradient-art: linear-gradient(130deg, rgba(255,255,255,.42), transparent 48%), linear-gradient(0deg, rgba(53,46,38,.18), transparent 55%);
+  --gradient-hero: linear-gradient(120deg, #d7cfc3, #ede9e1);
+  --gradient-avatar: linear-gradient(135deg, #ded7cc, #f8f5ef);
+  --shadow-shell: 0 24px 70px rgba(47, 41, 33, 0.13);
+  --shadow-card: 0 7px 20px rgba(54, 47, 38, 0.04);
+  --shadow-card-hover: 0 9px 22px rgba(59, 51, 41, 0.08);
+  --shadow-feature: 0 4px 12px rgba(61, 52, 40, 0.12), 0 20px 44px rgba(61, 52, 40, 0.16);
+  --image-filter: grayscale(18%) sepia(8%);
+
+  /* Semantic compatibility aliases used throughout the application. */
+  --paper: var(--color-surface);
+  --paper-light: var(--color-surface-raised);
+  --paper-deep: var(--color-surface-subtle);
+  --ink: var(--color-text);
+  --muted: var(--color-text-muted);
+  --quiet: var(--color-text-quiet);
+  --line: var(--color-border);
+  --bronze: var(--color-accent);
+  --brown: var(--color-action);
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", "Courier New", monospace;
+  --shadow-soft: var(--shadow-card);
+  --radius-card: 16px;
+  --content-width: 1240px;
+}
+
+:root[data-theme='dark'] {
+  color: #e4e8e9;
+  background: #071018;
+  color-scheme: dark;
+
+  --color-canvas: #071018;
+  --color-surface: #0b151d;
+  --color-surface-raised: #111d25;
+  --color-surface-subtle: #16232c;
+  --color-surface-translucent: rgba(17, 29, 37, 0.78);
+  --color-surface-hover: rgba(139, 157, 145, 0.09);
+  --color-text: #e4e8e9;
+  --color-text-muted: #a3adb2;
+  --color-text-quiet: #78858c;
+  --color-border: rgba(188, 205, 211, 0.15);
+  --color-border-soft: rgba(188, 205, 211, 0.09);
+  --color-accent: #8b9d91;
+  --color-accent-strong: #b7c5bc;
+  --color-action: #263640;
+  --color-action-hover: #31434e;
+  --color-on-action: #eef2f1;
+  --color-focus: #a8b9ae;
+  --color-header: rgba(11, 21, 29, 0.9);
+  --color-nav: rgba(10, 20, 28, 0.94);
+  --color-control: rgba(218, 229, 231, 0.055);
+  --color-control-selected: rgba(139, 157, 145, 0.14);
+  --color-art: #18242c;
+  --color-art-paper: #1b282f;
+  --color-art-stone: #202a30;
+  --color-art-court: #19262e;
+  --color-chart-track: rgba(188, 205, 211, 0.08);
+  --color-chart-bar: #65766e;
+  --gradient-stage: radial-gradient(circle at 14% 5%, rgba(99, 121, 132, 0.17), transparent 29%), linear-gradient(135deg, #111d26, #050b10);
+  --gradient-case: linear-gradient(90deg, rgba(11, 21, 29, 0.98) 0%, rgba(11, 21, 29, 0.84) 46%, rgba(11, 21, 29, 0.28) 78%);
+  --gradient-art: linear-gradient(130deg, rgba(198, 211, 214, 0.12), transparent 48%), linear-gradient(0deg, rgba(1, 6, 9, 0.5), transparent 62%);
+  --gradient-hero: linear-gradient(120deg, #17242c, #26343c);
+  --gradient-avatar: linear-gradient(135deg, #1a2830, #2c3a40);
+  --shadow-shell: 0 24px 75px rgba(0, 0, 0, 0.44);
+  --shadow-card: 0 8px 22px rgba(0, 0, 0, 0.16);
+  --shadow-card-hover: 0 12px 26px rgba(0, 0, 0, 0.24);
+  --shadow-feature: 0 5px 16px rgba(0, 0, 0, 0.22), 0 22px 48px rgba(0, 0, 0, 0.34);
+  --image-filter: grayscale(82%) sepia(8%) brightness(0.58) contrast(1.08);
+}

@@ -1,0 +1,65 @@
+@media (min-width: 640px) {
+  .stage { padding: 0; }
+  .app-shell { width: 100%; max-width: 1440px; margin: 0 auto; overflow: visible; box-shadow: var(--shadow-shell); }
+  .app-header { position: sticky; top: 0; grid-template-columns: 1fr auto 1fr; min-height: 86px; padding: 18px 40px; border-bottom: 1px solid var(--color-border-soft); background: var(--color-header); backdrop-filter: blur(18px); }
+  .app-header .header-actions { justify-self: end; }
+  .desktop-nav { display: flex; align-items: center; gap: 8px; }
+  .desktop-nav .nav-item { gap: 7px; padding: 10px 13px; border-radius: 999px; transition: background .2s; }
+  .desktop-nav .nav-item:hover { background: var(--color-surface-hover); }
+  .desktop-nav .nav-item.active { background: var(--color-control-selected); }
+  .mobile-nav { display: none; }
+
+  .page { max-width: var(--content-width); min-height: calc(100vh - 86px); margin: 0 auto; padding: 46px 40px 72px; }
+  .daily-case { height: 340px; }
+  .case-copy { width: 58%; padding: 42px; }
+  .case-copy h2 { margin: 23px 0 13px; font-size: 48px; line-height: .88; }
+  .case-meta { font-size: 10px; }
+  .primary-button { top: 243px; left: 42px; width: 210px; height: 56px; padding: 0 21px; font-size: 13px; }
+  .action-grid { margin-top: 16px; }
+  .action-card { min-height: 112px; flex-direction: row; justify-content: flex-start; gap: 16px; padding: 20px 22px; text-align: left; }
+  .action-card h3 { margin: 0 0 5px; font-size: 21px; }
+  .action-card p { font-size: 10px; }
+  .action-arrow { margin: 0 0 0 auto; }
+
+  .home-lower-grid { margin-top: 38px; }
+  .module-grid { grid-auto-flow: initial; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; overflow: visible; }
+  .module-card.compact { min-height: 225px; }
+  .compact .module-art { height: 105px; }
+  .weekly-card { margin-top: 24px; padding: 22px; }
+
+  .page-heading { flex-direction: row; align-items: flex-start; gap: 40px; margin: 8px 0 42px; }
+  .page-heading .back-link { flex: 0 0 auto; margin-top: 10px; }
+  .page-heading h1 { font-size: clamp(54px, 6vw, 76px); }
+  .page-heading p { max-width: 520px; font-size: 13px; }
+  .course-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .course-list .module-card { grid-template-columns: 40% 1fr; min-height: 210px; }
+  .module-hero-art { height: 220px; padding: 25px; }
+  .module-hero-art .big-mark { font-size: 96px; }
+  .lesson-row { min-height: 82px; }
+  .notes-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .note-card { min-height: 180px; padding: 24px; }
+  .profile-layout { grid-template-columns: minmax(260px, .75fr) minmax(320px, 1.25fr); gap: 16px; }
+  .profile-card { min-height: 320px; display: flex; flex-direction: column; justify-content: center; }
+}
+
+@media (min-width: 980px) {
+  .app-header { padding-inline: 64px; }
+  .page { padding: 58px 64px 84px; }
+  .home-lower-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(315px, .82fr); align-items: stretch; gap: 22px; }
+  .home-lower-grid .weekly-card { min-height: 100%; margin-top: 0; display: flex; flex-direction: column; justify-content: space-between; }
+  .home-lower-grid .week-chart { min-height: 145px; padding-top: 24px; }
+  .home-lower-grid .day-column { height: 125px; }
+  .course-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .course-list .module-card { display: block; }
+  .course-list .module-art { min-height: 150px; }
+  .lesson-layout { grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr); gap: 18px; align-items: start; }
+  .position-card { margin-top: 0; }
+}
+
+@media (min-width: 1280px) {
+  .daily-case { height: 380px; }
+  .case-copy { padding: 50px; }
+  .case-copy h2 { font-size: 56px; }
+  .primary-button { top: 275px; left: 50px; width: 224px; }
+  .action-card { min-height: 120px; padding-inline: 30px; }
+}
