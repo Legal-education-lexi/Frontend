@@ -6,7 +6,6 @@
 .app-shell {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
   background: var(--paper);
 }
 
@@ -22,6 +21,10 @@
 .app-header {
   position: relative;
   z-index: 20;
+  min-height: 78px;
+}
+
+.app-header-inner {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;

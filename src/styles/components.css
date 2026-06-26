@@ -1,11 +1,13 @@
 .daily-case {
   position: relative;
   display: block;
-  height: 250px;
+  height: 292px;
   overflow: hidden;
+  border: 1px solid var(--color-feature-border);
   border-radius: var(--radius-card);
   background-color: var(--color-art-paper);
-  background-position: center;
+  background-clip: border-box;
+  background-position: 63% center;
   background-size: cover;
   box-shadow: var(--shadow-feature);
 }
@@ -14,44 +16,68 @@
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   background: var(--gradient-case);
 }
 
 .case-copy {
   position: relative;
   z-index: 2;
-  width: 70%;
-  padding: 25px 20px;
+  width: min(72%, 520px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px 22px;
 }
 
 .case-copy h2 {
-  margin: 14px 0 8px;
-  font: 500 30px/0.88 var(--serif);
-  letter-spacing: -0.02em;
+  margin: 27px 0 14px;
+  font: 500 48px/0.88 var(--serif);
+  letter-spacing: 0;
 }
 
 .case-copy h2 span:last-child br { display: none; }
-.case-meta { color: var(--color-text-muted); font: 400 9px/1 var(--mono); }
+.case-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-muted);
+  font: 400 12px/1 var(--mono);
+}
+
+.case-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.case-stat + .case-stat {
+  padding-left: 12px;
+  border-left: 1px solid var(--color-border-soft);
+}
+
+.case-stat svg { flex: 0 0 auto; color: var(--color-accent); }
 
 .primary-button {
-  position: absolute;
-  top: 165px;
-  left: 20px;
-  width: 174px;
-  height: 52px;
+  width: min(100%, 248px);
+  height: 64px;
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 18px;
-  border-radius: 10px;
+  padding: 0 25px;
+  border: 1px solid var(--color-case-action-border);
+  border-radius: 11px;
   color: var(--color-on-action);
-  background: var(--brown);
-  box-shadow: var(--shadow-card);
-  font-size: 12px;
+  background: var(--gradient-case-action);
+  box-shadow: var(--shadow-case-action);
+  font-size: 19px;
   transition: transform 0.2s, background 0.2s;
 }
 
-.daily-case:hover .primary-button { transform: translateY(-2px); background: var(--color-action-hover); }
+.daily-case:hover .primary-button { transform: translateY(-2px); background: var(--gradient-case-action-hover); }
 
 .action-grid {
   display: grid;
@@ -102,8 +128,8 @@
   grid-auto-flow: column;
   grid-auto-columns: 73%;
   gap: 10px;
-  margin: 0 -20px;
-  padding: 0 20px 8px;
+  margin: 0;
+  padding: 0 0 8px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;

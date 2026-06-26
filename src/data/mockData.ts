@@ -88,11 +88,17 @@ export const lessons: Lesson[] = [
 ]
 
 export const dailyCase = {
-  label: 'Кейс дня',
-  title: 'Добросовестность\nв договоре',
+  label: 'План на сегодня',
+  title: 'План\nна сегодня',
   moduleId: 'civil-law',
   lessonId: 'contract-terms',
   backgroundImageUrl: columnSteps,
+  actionLabel: 'Открыть',
+  stats: [
+    { id: 'duration', label: '7 минут' },
+    { id: 'cards', label: '17 карточек' },
+    { id: 'case', label: '1 дело' },
+  ],
 }
 
 export const weeklyProgress = {
