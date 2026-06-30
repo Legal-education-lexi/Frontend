@@ -16,7 +16,7 @@ export function DailyCaseCard() {
       style={{ backgroundImage: `url("${dailyCase.backgroundImageUrl}")` }}
     >
       <div className="case-copy">
-        <span className="eyebrow">{dailyCase.label}</span>
+        {dailyCase.label ? <span className="eyebrow">{dailyCase.label}</span> : null}
         <h2>
           {dailyCase.title.split('\n').map((line) => <span key={line}>{line}<br /></span>)}
         </h2>
