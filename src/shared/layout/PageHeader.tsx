@@ -5,16 +5,28 @@ interface PageHeaderProps {
   title: string
   subtitle?: string
   back?: boolean
+  backTo?: string
+  backLabel?: string
 }
 
-export function PageHeader({ title, subtitle, back = false }: PageHeaderProps) {
+export function PageHeader({ title, subtitle, back = false, backTo, backLabel = 'Назад' }: PageHeaderProps) {
   const navigate = useNavigate()
+  const showBackButton = back || Boolean(backTo)
+
+  function handleBack() {
+    if (backTo) {
+      navigate(backTo)
+      return
+    }
+
+    navigate(-1)
+  }
 
   return (
     <header className="page-heading">
-      {back ? (
-        <button className="back-link" onClick={() => navigate(-1)} type="button">
-          <ArrowLeft size={16} /> Назад
+      {showBackButton ? (
+        <button className="back-link" onClick={handleBack} type="button">
+          <ArrowLeft size={16} /> {backLabel}
         </button>
       ) : null}
       <div>

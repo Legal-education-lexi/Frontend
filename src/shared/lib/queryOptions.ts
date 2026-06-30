@@ -6,7 +6,12 @@ export const modulesQuery = queryOptions({
   queryFn: mockApi.getModules,
 })
 
-export const notesQuery = queryOptions({
-  queryKey: ['notes'],
-  queryFn: mockApi.getNotes,
+export const newsQuery = queryOptions({
+  queryKey: ['news'],
+  queryFn: mockApi.getNews,
+})
+
+export const practiceCardsQuery = queryOptions({
+  queryKey: ['practice-cards'],
+  queryFn: mockApi.getPracticeCards,
 })

@@ -11,7 +11,7 @@ const statIcons = {
 export function DailyCaseCard() {
   return (
     <Link
-      to={`/courses/${dailyCase.moduleId}/${dailyCase.lessonId}`}
+      to="/practice"
       className="daily-case"
       style={{ backgroundImage: `url("${dailyCase.backgroundImageUrl}")` }}
     >

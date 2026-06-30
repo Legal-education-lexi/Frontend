@@ -117,6 +117,6 @@
 }
 
 .course-list,
-.notes-list { display: grid; gap: 13px; }
+.news-list { display: grid; gap: 13px; }
 .lesson-layout,
 .profile-layout { display: grid; gap: 13px; }

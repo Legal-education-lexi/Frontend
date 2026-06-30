@@ -39,8 +39,9 @@
   .module-hero-art { height: 220px; padding: 25px; }
   .module-hero-art .big-mark { font-size: 96px; }
   .lesson-row { min-height: 82px; }
-  .notes-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .note-card { min-height: 180px; padding: 24px; }
+  .news-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .news-card { min-height: 218px; padding: 24px; }
+  .news-article { padding: 30px 34px; }
   .profile-layout { grid-template-columns: minmax(260px, .75fr) minmax(320px, 1.25fr); gap: 16px; }
   .profile-card { min-height: 320px; display: flex; flex-direction: column; justify-content: center; }
 }

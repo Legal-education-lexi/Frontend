@@ -1,11 +1,11 @@
-import { ArrowRight, BookOpen, FileCheck2, Scale } from 'lucide-react'
+import { ArrowRight, BookOpen, Newspaper, Scale } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { dailyCase } from '../../data/mockData'
 
 const learningActions = [
   { title: 'Чтение', description: 'Освойте основу', icon: BookOpen, to: '/courses' },
   { title: 'Решение', description: 'Разберите кейс', icon: Scale, to: `/courses/${dailyCase.moduleId}/${dailyCase.lessonId}` },
-  { title: 'Позиция', description: 'Сформулируйте вывод', icon: FileCheck2, to: '/notes' },
+  { title: 'Новости', description: 'Следите за практикой', icon: Newspaper, to: '/news' },
 ] as const
 
 export function LearningActions() {
